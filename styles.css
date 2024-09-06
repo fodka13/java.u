@@ -1,0 +1,101 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* شريط التنقل */
+nav {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.burger-menu {
+    display: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* قائمة البرجر لشاشات الهواتف */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* رسالة قيد التطوير */
+.container {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+}
